@@ -1,0 +1,306 @@
+:root {
+    /* borders */
+    --main-panel-border-color: #B0B0B0;
+    --main-panel-border-thickness: 1px;
+    --panel-border-radius: 10px;
+
+    /* colors */
+    --blue: #176294;
+    --white: #E6E6FA;
+    --gray: #F5F5F5;
+}
+
+body {
+    background-image: url('../img/gojo-background-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+}
+
+h4 {
+    font-weight: lighter;
+}
+
+br {
+    user-select: none;
+}
+
+fieldset {
+    border-radius: var(--panel-border-radius);
+    border: var(--main-panel-border-thickness) solid var(--blue)
+}
+
+legend {
+    font-weight: bold;
+    font-size: 14pt;
+    user-select: none;
+    color: var(--blue);
+}
+
+#main-panel {
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto 50px auto;
+}
+
+#name-panel {
+    display: flex;
+    background-image: url("../img/cover-2.jpg");
+    background-size: cover;
+    height: 190px;
+    margin: 0 auto 0 auto;
+    padding: 20px 20px 0 0;
+    width: 880px;
+    border-top-left-radius: var(--panel-border-radius);
+    border-top-right-radius: var(--panel-border-radius);
+    border-top: var(--main-panel-border-thickness) solid var(--main-panel-border-color);
+    border-left: var(--main-panel-border-thickness) solid var(--main-panel-border-color);
+    border-right: var(--main-panel-border-thickness) solid var(--main-panel-border-color);
+    color: var(--gray);
+}
+
+#name-panel-left {
+    padding-left: 20px;
+    background-color: rgba(0, 0, 0, 0.45);
+    margin-bottom: 15px;
+    box-shadow: 5px 0 50px rgba(0, 0, 0, 0.95);
+}
+
+#name-panel h4 {
+    font-weight: bold;
+    font-style: italic;
+}
+
+#meta-information {
+    line-height: 0.5pt;
+    padding-top: 20px;
+}
+
+#links-panel {
+    display: flex;
+    gap: 20px;
+    background: var(--blue);
+    height: 30px;
+    margin: 0 auto 0 auto;
+    padding: 10px 0 0 20px;
+    width: 880px;
+    border-left: var(--main-panel-border-thickness) solid var(--main-panel-border-color);
+    border-right: var(--main-panel-border-thickness) solid var(--main-panel-border-color);
+}
+
+#links-panel a {
+    color: var(--gray);
+}
+
+#mid-header-content {
+    display: flex;
+    width: 830px;
+    margin: 0 auto 0 auto;
+    justify-content: flex-end;
+    padding-right: 0;
+}
+
+#photo-scaler {
+    flex: 2;
+}
+
+#photo-panel {
+    flex: 1;
+    position: absolute;
+    width: 200px; /* Adjust the width of the circular profile picture */
+    height: 200px; /* Adjust the height of the circular profile picture */
+    margin-top: -130px; /* Half of the height to vertically center */
+    border: 5px solid var(--blue);
+    border-radius: 50%; /* Make it circular */
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+}
+
+#content-panel {
+    background: transparent;
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    border-right: var(--main-panel-border-thickness) solid var(--main-panel-border-color);
+    border-left: var(--main-panel-border-thickness) solid var(--main-panel-border-color);
+}
+
+#curriculum-panel {
+    flex: 2.5;
+    background: var(--gray);
+    padding: 10px 20px;
+}
+
+#personal-info-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    padding: 80px 20px 40px 20px;
+}
+
+#personal-info-sup-panel {
+    flex: 12;
+}
+
+#personal-info-inf-panel {
+    flex: 0;
+    display: flex;
+    justify-content: end;
+    user-select: none;
+}
+
+#personal-info-inf-panel img {
+    width: 50px;
+}
+
+#profile-description-panel {
+    text-align: justify;
+}
+
+#profile-description-panel h4 {
+    font-weight: normal;
+}
+
+#cv-title {
+    margin-bottom: -15px;
+}
+
+#profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+    border-radius: 50%;
+    position: absolute;
+}
+#interests {
+    background: var(--blue);
+    margin: auto;
+    padding: 10px 20px;
+    width: 860px;
+    height: 110px;
+    border-bottom-left-radius: var(--panel-border-radius);
+    border-bottom-right-radius: var(--panel-border-radius);
+    border-bottom: var(--main-panel-border-thickness) solid var(--main-panel-border-color);
+    border-left: var(--main-panel-border-thickness) solid var(--main-panel-border-color);
+    border-right: var(--main-panel-border-thickness) solid var(--main-panel-border-color);
+}
+
+#interests legend {
+    color: var(--white);
+}
+
+#interests h3 {
+    color: var(--white);
+    font-weight: lighter;
+}
+
+#interests fieldset {
+    border: var(--main-panel-border-thickness) solid var(--white);
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.illustration {
+    width: 200px;
+    height: 150px;
+    border-radius: var(--panel-border-radius);
+    box-shadow: 0 0 8px var(--blue);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.multiple-illustrations-container {
+    display: flex;
+    gap: 20px;
+}
+
+.embedded-video {
+    margin-left: 160px;
+    width: 250px;
+    height: 200px;
+    border: 0;
+}
+
+#gojo-clan-symbol {
+    margin-left: 175px;
+}
+
+#ecole-exorcisme-tokyo {
+    margin-left: 175px;
+}
+
+/* Styles for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out; /* Add fade-in animation */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px 20px 40px 20px;
+    border-radius: var(--panel-border-radius);
+    border: var(--main-panel-border-thickness) solid var(--blue);
+}
+
+.image-modal-content {
+    padding: 0;
+    background: transparent;
+    border: none;
+    user-select: none;
+}
+
+.image-modal-content img {
+    max-height: 750px;
+    border-radius: var(--panel-border-radius);
+    border: var(--main-panel-border-thickness) solid var(--blue);
+}
+
+.modal-content div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1px;
+}
+
+.modal-content a{
+    color: purple;
+}
+
+/* Style for the close button */
+.close {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* CSS animation for fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.indented {
+    margin-left: 75px;
+}
